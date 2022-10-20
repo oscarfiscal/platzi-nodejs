@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "lint": "eslint"
+    "lint": "eslint",
+    "migrations:generate": "sequelize migration:generate --name",
+    "migrations:run": "sequelize db:migrate",
+    "migrations:revert": "sequelize db:migrate:undo"
   },
   "keywords": [],
   "author": "",
@@ -17,14 +20,20 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "nodemon": "^2.0.20",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "sequelize-cli": "^6.5.1"
   },
   "dependencies": {
     "@hapi/boom": "^10.0.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "faker": "^5.5.3",
-    "joi": "^17.6.3"
+    "joi": "^17.6.3",
+    "mysql2": "^2.3.3",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.25.1"
   },
   "engines": {
     "node": ">16.17.1"
